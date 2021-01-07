@@ -117,9 +117,16 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/AaronTheBruce/inventory-tracker.git
    ```
-2. Install NPM packages
+2. Setup virtualenv
+    navigate to `c:/Users/{username}` or where you have `/venv/bin/activate` installed
+    ```sh
+    source venv/bin/activate
+    ```
+3. Navigate to the root directory of the project
+
+4. Install pip packages
    ```sh
-   npm install
+   pip install
    ```
 
 
@@ -172,10 +179,11 @@ Project Link: [https://github.com/AaronTheBruce/inventory-tracker](https://githu
 <!-- citations -->
 ## Citations
 
-* [README Template](https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md)
-* [Django SetUp for WSL](https://www.web-devil.com/2019/05/python-django-development-on-windows-with-wsl/)
+* [Django Authentication](https://docs.djangoproject.com/en/3.1/topics/auth/)
 * [Django Gitignore](https://github.com/django/django/blob/master/.gitignore)
 * [Django Project SetUp](https://www.techwithtim.net/tutorials/django/setup/)
+* [Django SetUp for WSL](https://www.web-devil.com/2019/05/python-django-development-on-windows-with-wsl/)
+* [README Template](https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md)
 
 
 
