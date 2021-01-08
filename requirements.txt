@@ -1,2 +1,3 @@
 dotenv==0.15.0
-
+csrf==0.1b1
+django_crispy_forms==1.10.0

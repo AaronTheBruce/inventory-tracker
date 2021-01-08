@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Create New Product {% endblock %}
+
+{% block content %}
+  <h2 style="display: grid; justify-content: center; margin: 5%;">New Product</h2>
+  <form method="POST" action="/create/" style="display: grid; justify-content: center; margin: 0% 15%;">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="save">
+    <small> (IS = In Stock | OS = Out of Stock | DC = Discontinued)</small>
+  </form>
+{% endblock %}
