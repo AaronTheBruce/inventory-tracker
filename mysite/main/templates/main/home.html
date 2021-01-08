@@ -1,17 +1,50 @@
 {% extends 'main/base.html' %}
+<!-- https://getbootstrap.com/docs/4.1/components/list-group/ -->
+{% block title %} Home {% endblock %}
 
-{% block title %}
-  Home
+{% block nav %}
+<nav class="nav nav-pills nav-fill container" style="display: grid; margin-bottom: 5%;">
+    <!-- <a class="nav-item nav-link active col" href="#" style="">Add Product</a> -->
+    <a class="nav-item nav-link active col" href="/login" style="justify-self: flex-end;">Logout</a>
+</nav>
 {% endblock %}
+
 
 {% block content %}
-  <div>
-    <ul class="list-group" style="display: grid; justify-content: center; margin: 15%">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros</li>
+<div class="container">
+  <div style="display: flex; justify-content: center;">
+    <h1>Inventory</h1>
+  </div>
+  <div id="product-list">
+    <ul style="list-style-type: none;">
+      <li>
+        <div class="input-group mb-3 row">
+          <div class="input-group-prepend col">
+            <label class="input-group-text" for="inputGroupSelect01">Cheese</label>
+          </div>
+          <select class="custom-select col" id="inputGroupSelect01" style="max-width: 200px;">
+            <option selected>Availability...</option>
+            <option value="1">In Stock</option>
+            <option value="2">Out of Stock</option>
+            <option value="3">Discontinued</option>
+          </select>
+          <div class="input-group-prepend col" style="max-width: 120px; padding-right: 0px">
+            <label class="input-group-text">quantity</label>
+          </div>
+          <input
+          type="number"
+          min=0
+          class="form-control col"
+          aria-label="Integer Amount of products in stock"
+          style="max-width: 60px;"
+          />
+          <div class="input-group-append col" id="button-addon4">
+            <button class="btn btn-outline-secondary" type="button">Edit</button>
+            <button class="btn btn-outline-secondary" type="button">Delete</button>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
-{% endblock %}
+</div>
+  {% endblock %}
