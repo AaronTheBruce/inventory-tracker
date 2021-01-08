@@ -181,7 +181,7 @@ Project Link: [https://github.com/AaronTheBruce/inventory-tracker](https://githu
 
 * [Django Authentication](https://docs.djangoproject.com/en/3.1/topics/auth/)
 * [Django Gitignore](https://github.com/django/django/blob/master/.gitignore)
-* [Django Project SetUp](https://www.techwithtim.net/tutorials/django/setup/)
+* [Django Set Up](https://www.techwithtim.net/tutorials/django/)
 * [Django SetUp for WSL](https://www.web-devil.com/2019/05/python-django-development-on-windows-with-wsl/)
 * [README Template](https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md)
 
