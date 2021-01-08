@@ -3,11 +3,11 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Sign Up
+Log In
 {% endblock %}
 
 {% block content %}
-<form style="display: grid; justify-content: center; margin: 20%;">
+<form style="display: grid; justify-content: center; margin: 15%;">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input
@@ -30,5 +30,6 @@ Sign Up
     />
   </div>
   <button type="submit" class="btn btn-primary">Login</button>
+  <a href="/sign-up"><small>Don't have an account? Sign Up Here!</small></a>
 </form>
 {% endblock %}
