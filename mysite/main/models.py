@@ -1,6 +1,7 @@
 # https://docs.djangoproject.com/en/2.1/ref/models/fields/
 # https://doc.oroinc.com/user/concept-guides/inventory/ ideas for how to classify inventory status
-# https://www.techwithtim.net/tutorials/django/sqlite3-database/
+# https://www.techwithtim.net/tutorials/django/
+# https://github.com/arsentieva/campy-backend/blob/master/app/models/models.py | referring to an old project I worked on
 from django.db import models
 
 # Create your models here.
