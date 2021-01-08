@@ -10,12 +10,6 @@ def index(_response):
 def home(_response):
   return render(_response, "main/home.html", {})
 
-def sign_up(_response):
-  return render(_response, "main/sign-up.html", {})
-
-def log_in(_response):
-  return render(_response, "main/log-in.html", {})
-
 def create(_response):
   if _response.method == "POST":
     form = CreateNewProduct(_response.POST)
