@@ -20,5 +20,6 @@ from register import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sign-up/', views.sign_up, name="register"),
+    path('', include('django.contrib.auth.urls')),
     path('', include("main.urls")), # include the main app
 ]

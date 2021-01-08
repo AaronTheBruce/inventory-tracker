@@ -5,9 +5,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<form method="POST" action="/create/" style="display: grid; justify-content: center; margin: 0% 15%;">
+<h1 style="display: grid; justify-content: center; margin: 2% 15%;">Sign Up</h1>
+<form method="POST" class="form-group" style="display: grid; justify-content: center; margin: 0% 15%;">
   {% csrf_token %}
   {{ form|crispy }}
-  <input type="submit" value="Register">
+  <p>Have an account? <a href="/login">Login here</a></p>
+  <input type="submit" class="btn btn-success" value="Register">
 </form>
 {% endblock %}
