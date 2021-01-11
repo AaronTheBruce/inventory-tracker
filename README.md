@@ -170,7 +170,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@AaronDeBruce](https://twitter.com/AaronDeBruce) - aaronbruce555@gmail.com
+Your Name - [Aaron Bruce LinkedIn](https://linkedin.com/in/aaronbruce555) - aaronbruce555@gmail.com
 
 Project Link: [https://github.com/AaronTheBruce/inventory-tracker](https://github.com/AaronTheBruce/inventory-tracker)
 
