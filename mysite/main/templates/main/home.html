@@ -18,8 +18,7 @@
         <th scope="col">Product Name</th>
         <th scope="col">Quantity</th>
         <th scope="col">Status</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -28,20 +27,12 @@
         <th scope="row">{{ data.id }}</th>
         <td>{{ data.item_name }}</td>
         <td>{{ data.item_quantity }}</td>
+        <td>{{ data.status }}</td>
         <td>
-          <!-- <% if data.status == 'IS': %>
-            'In Stock'
-          <% end %>
-          <% elif data.status == 'OS': %>
-            'Out of Stock'
-          <% end %>
-          <% else: %>
-            'Discontinued'
-          <% end %> -->
-          {{ data.status }}
+          <a class="btn btn-secondary" method="GET" href="/update/{{data.id}}">Edit</a>
+          |
+          <a class="btn btn-secondary" method="DELETE" href="/delete/{{data.id}}">Delete</a>
         </td>
-        <td><a class="btn btn-secondary" method="GET" href="/create/{{ data.id }}">Edit</a></td>
-        <td><a class="btn btn-secondary" method="DELETE" href="/delete/{{ data.id}}">Delete</a></td>
       </tr>
       {% endfor %}
     </tbody>

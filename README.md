@@ -90,6 +90,7 @@
 
 ### Built With
 
+* [Python]()
 * [Django]()
 * [SQLite]()
 * [HTML]()
@@ -104,8 +105,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* pip
+* Install pip (Linux)
   ```sh
   sudo apt-get install python3-pip python-dev
   ```
@@ -117,6 +117,7 @@ This is an example of how to list things you need to use the software and how to
    git clone https://github.com/AaronTheBruce/inventory-tracker.git
    ```
 2. Setup virtualenv
+    Please review https://docs.python.org/3/library/venv.html for setting up virtual environment if you don't have it installed
     navigate to `c:/Users/{username}` or where you have `/venv/bin/activate` installed
     ```sh
     source venv/bin/activate
