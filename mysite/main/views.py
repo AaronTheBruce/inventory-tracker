@@ -41,3 +41,7 @@ def update(_req, _id):
       messages.success(_req, 'Data has been updated')
       return redirect('/')
   return render(_req, 'main/update.html', {'form':updateForm, 'item': item})
+
+def delete(_req, _id):
+  Product.objects.filter(id=_id).delete()
+  return redirect('/')

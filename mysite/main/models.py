@@ -73,9 +73,9 @@ class Employee(AbstractBaseUser, PermissionsMixin):
 class Product(models.Model):
   # InStock, OutOfStock, Discontinued
   INVENTORY_STATUS = (  # By default, products should be Out of Stock
-    ('IS', 'In Stock'),
-    ('OS', 'Out of Stock'),
-    ('DC', 'Discontinued'),
+    ('In Stock', 'In Stock'),
+    ('Out of Stock', 'Out of Stock'),
+    ('Discontinued', 'Discontinued'),
   )
   employee = models.ForeignKey(Employee, on_delete=models.CASCADE, default="") # default set to "" to bypass makemigrations error
   item_name = models.CharField(max_length=100)
