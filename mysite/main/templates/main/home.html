@@ -18,8 +18,7 @@
         <th scope="col">Product Name</th>
         <th scope="col">Quantity</th>
         <th scope="col">Status</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -40,8 +39,11 @@
           <% end %> -->
           {{ data.status }}
         </td>
-        <td><a class="btn btn-secondary" method="GET" href="/create/{{ data.id }}">Edit</a></td>
-        <td><a class="btn btn-secondary" method="DELETE" href="/delete/{{ data.id}}">Delete</a></td>
+        <td>
+          <a class="btn btn-secondary" method="GET" href="/create/{{ data.id }}">Edit</a>
+          |
+          <a class="btn btn-secondary" method="DELETE" href="/delete/{{ data.id}}">Delete</a>
+        </td>
       </tr>
       {% endfor %}
     </tbody>

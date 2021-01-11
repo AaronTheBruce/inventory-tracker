@@ -80,7 +80,7 @@ class Product(models.Model):
   employee = models.ForeignKey(Employee, on_delete=models.CASCADE, default="") # default set to "" to bypass makemigrations error
   item_name = models.CharField(max_length=100)
   item_quantity = models.IntegerField(default=0)
-  status = models.CharField(max_length=2, choices=INVENTORY_STATUS, default='OS')
+  status = models.CharField(max_length=12, choices=INVENTORY_STATUS, default='Out of Stock')
 
   def to_dictionary(self):
     return {
@@ -90,4 +90,3 @@ class Product(models.Model):
       "status": self.status,
       "employee_id": self.employee_id,
     }
-
