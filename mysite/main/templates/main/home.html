@@ -9,42 +9,43 @@
 </nav>
 {% endblock %}
 
-
 {% block content %}
 <div class="container">
-  <div style="display: flex; justify-content: center;">
-    <h1>Inventory</h1>
-  </div>
-  <div id="product-list">
-    <ul style="list-style-type: none;">
-      <li>
-        <div class="input-group mb-3 row">
-          <div class="input-group-prepend col">
-            <label class="input-group-text" for="inputGroupSelect01">Cheese</label>
-          </div>
-          <select class="custom-select col" id="inputGroupSelect01" style="max-width: 200px;">
-            <option selected>Availability...</option>
-            <option value="1">In Stock</option>
-            <option value="2">Out of Stock</option>
-            <option value="3">Discontinued</option>
-          </select>
-          <div class="input-group-prepend col" style="max-width: 120px; padding-right: 0px">
-            <label class="input-group-text">quantity</label>
-          </div>
-          <input
-          type="number"
-          min=0
-          class="form-control col"
-          aria-label="Integer Amount of products in stock"
-          style="max-width: 60px;"
-          />
-          <div class="input-group-append col" id="button-addon4">
-            <button class="btn btn-outline-secondary" type="button">Edit</button>
-            <button class="btn btn-outline-secondary" type="button">Delete</button>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Status</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for data in dataset %}
+      <tr>
+        <th scope="row">{{ data.id }}</th>
+        <td>{{ data.item_name }}</td>
+        <td>{{ data.item_quantity }}</td>
+        <td>
+          <!-- <% if data.status == 'IS': %>
+            'In Stock'
+          <% end %>
+          <% elif data.status == 'OS': %>
+            'Out of Stock'
+          <% end %>
+          <% else: %>
+            'Discontinued'
+          <% end %> -->
+          {{ data.status }}
+        </td>
+        <td><a class="btn btn-secondary" method="GET" href="/create/{{ data.id }}">Edit</a></td>
+        <td><a class="btn btn-secondary" method="DELETE" href="/delete/{{ data.id}}">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a class="btn btn-primary" method="GET" href="/create">Create New Product</a>
 </div>
   {% endblock %}
