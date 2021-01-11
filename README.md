@@ -94,7 +94,6 @@
 * [SQLite]()
 * [HTML]()
 * [CSS]()
-* [JavaScript]()
 
 
 
@@ -106,9 +105,9 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* pip
   ```sh
-  npm install npm@latest -g
+  sudo apt-get install python3-pip python-dev
   ```
 
 ### Installation
@@ -184,6 +183,7 @@ Project Link: [https://github.com/AaronTheBruce/inventory-tracker](https://githu
 * [Django Set Up](https://www.techwithtim.net/tutorials/django/)
 * [Django SetUp for WSL](https://www.web-devil.com/2019/05/python-django-development-on-windows-with-wsl/)
 * [Django-Rest-API](https://bezkoder.com/django-rest-api/)
+* [Django Update and Delete](https://projectsplaza.com/add-and-update-data-with-modelform-in-django-3/)
 * [README Template](https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md)
 
 
