@@ -1,21 +1,23 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import Employee, Product
 from .forms import CreateNewProduct
 # Create your views here.
 # https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/
+# https://projectsplaza.com/add-and-update-data-with-modelform-in-django-3/
 
-def index(_response):
+def index(_req):
   employee = Employee.objects.get(id=2)
-  return render(_response, "main/base.html", {})
+  return render(_req, "main/base.html", {})
 
-def home(_response):
+def home(_req):
   context = {}  # placeholder
   context["dataset"] = Product.objects.all() # provide product values to the key, dataset.
-  return render(_response, "main/home.html", context)
+  return render(_req, "main/home.html", context)
 
-def create(_response, id=None):
-  if _response.method == "POST":
-    form = CreateNewProduct(_response.POST)
+def create(_req):
+  if _req.method == "POST":
+    form = CreateNewProduct(_req.POST)
     if(form.is_valid()):
       n = form.cleaned_data["item_name"]
       q = form.cleaned_data["item_quantity"]
@@ -24,15 +26,18 @@ def create(_response, id=None):
       product = Product(item_name=n, item_quantity=q, status=s, employee_id=e) # once login has been implemented, we can get the employee id to fill here
       product.save()
     return redirect('/')
-  # elif _response.method == "PUT":
-  #   data = Product.objects.get(id=id)
-  #   form = UpdateProduct(_response.PUT, data)
-  #   if(form.is_valid()):
-  #     n = form.cleaned_data["item_name"]
-  #     q = form.cleaned_data["item_quantity"]
-  #     s = form.cleaned_data["status"]
-  #     e = 1
   else:
     form = CreateNewProduct()
 
-  return render(_response, "main/create.html", {'form': form})
+  return render(_req, "main/create.html", {'form': form})
+
+def update(_req, _id):
+  item=Product.objects.get(id=_id)
+  updateForm=CreateNewProduct(instance=item)
+  if _req.method == "POST":
+    productAdd=CreateNewProduct(_req.POST, instance=item)
+    if productAdd.is_valid():
+      productAdd.save()
+      messages.success(_req, 'Data has been updated')
+      return redirect('/')
+  return render(_req, 'main/update.html', {'form':updateForm, 'item': item})

@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Create New Product {% endblock %}
+
+{% block content %}
+  <h2 style="display: grid; justify-content: center; margin: 5%;">Update Product</h2>
+  <form method="POST" action="/update/{{item.id}}/" style="display: grid; justify-content: center; margin: 0% 15%;">
+    {% csrf_token %}
+    {{ form }}
+    <input style="margin-top: 2%;" class="btn btn-success" type="submit" value="save">
+    <a style="margin-top: 2%;" class="btn btn-secondary" href="/" >cancel</a>
+    <small> (IS = In Stock | OS = Out of Stock | DC = Discontinued)</small>
+  </form>
+{% endblock %}
