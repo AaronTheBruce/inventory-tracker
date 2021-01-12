@@ -15,3 +15,7 @@ def sign_up(_res):
   else:
     sign_up = RegisterForm()
   return render(_res, 'register/register.html', {'form': sign_up})
+
+# def log_in(_res):
+#   if _res.method == 'POST'
+
