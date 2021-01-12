@@ -7,6 +7,7 @@ from .forms import CreateNewProduct
 # Create your views here.
 # https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/
 # https://projectsplaza.com/add-and-update-data-with-modelform-in-django-3/
+# https://learndjango.com/tutorials/django-login-and-logout-tutorial
 
 @login_required
 def index(_req):
