@@ -5,7 +5,7 @@
 {% block nav %}
 <nav class="nav nav-pills nav-fill container" style="display: grid; margin-bottom: 5%;">
     <!-- <a class="nav-item nav-link active col" href="#" style="">Add Product</a> -->
-    <a class="nav-item nav-link active col" href="/login" style="justify-self: flex-end;">Logout</a>
+    <a class="nav-item nav-link active col" href="{% url 'logout' %}" style="justify-self: flex-end;">Logout</a>
 </nav>
 {% endblock %}
 

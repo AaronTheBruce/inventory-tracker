@@ -8,7 +8,6 @@ urlpatterns = [
   path('delete/<int:_id>/', views.delete, name='delete'),
   path('update/<int:_id>/', views.update, name='update'),
   path('create/', views.create, name='create'),
-  # path('delete/<int:id>', None, name='delete'),
   path('', views.home, name='home'),
   path('', views.index, name='index'), # index page
 ]
