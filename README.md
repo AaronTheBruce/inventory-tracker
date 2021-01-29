@@ -124,13 +124,19 @@ To get a local copy up and running follow these simple steps.
     ```
 3. Navigate to the root directory of the project
 
-4. Install pip packages
+4. Add .env file in the root of the project and add the SECRET_KEY, (it doesn't matter what it is for development, but needs a value either way)
    ```sh
-   pip install
+   touch .env
+   ```
+5. Install pip packages
+   ```sh
+   pip install -r requirements.txt
    ```
 
-
-
+6. Run the application
+   ```sh
+   python mysite/manage.py runserver
+   ```
 <!-- USAGE EXAMPLES -->
 ## Usage
 
